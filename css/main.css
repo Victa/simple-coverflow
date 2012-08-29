@@ -1,0 +1,165 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body{
+    padding:100px 0;
+    background:#FAFAFA;
+    min-height: 100%;
+}
+
+/* Coverflow */
+.coverflow{
+    position:relative;
+    width:100%;
+    overflow: hidden;
+    margin:0 auto;
+}
+.coverflow-wrapper{
+    position: relative;
+    width:880px;
+    height:280px;
+    margin:0 auto;
+    background: rgba(0,0,0,.05);
+}
+.coverflow-list{
+    -webkit-transition:all 200ms ease;
+    -moz-transition:all 200ms ease;
+    transition:all 200ms ease;
+    position:absolute;
+    top:0;left:0;
+    width:8000px;
+}
+@media only screen and (min-device-width : 1024px) {
+    .coverflow-list{-webkit-transform:translateZ(0);}
+}
+    .coverflow-list.sliding{
+        -webkit-transition:all 0ms ease;
+        -moz-transition:all 0ms ease;
+        transition:all 0ms ease;
+    }
+.coverflow-item{
+    -webkit-transition:all 200ms ease;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transition:all 200ms ease;
+    -moz-transform-origin: 50% 50%;
+    transition:all 200ms ease;
+    transform-origin: 50% 50%;
+    cursor:pointer;
+    position:relative;
+    float:left;
+    width:160px;
+    height:280px;
+    opacity:.5;
+}   
+    .coverflow-infos{
+        position:absolute!important;
+        left:-99999px;
+        top:-99999px;
+    }
+
+    .coverflow-label{
+        -webkit-transition:all 200ms ease;
+        -webkit-transform-origin: 0 0;
+        -moz-transition:all 200ms ease;
+    -moz-transform-origin: 50% 50%;
+    transition:all 200ms ease;
+    transform-origin: 50% 50%;
+        position:relative;
+        line-height:20px;
+        font-size:18px;
+        text-align:center;
+        top:40px;
+    }
+   
+    .coverflow-item .item{
+        -webkit-transition:all 200ms ease;
+        -webkit-transform-origin: 0 0;
+        -moz-transition:all 200ms ease;
+    -moz-transform-origin: 50% 50%;
+    transition:all 200ms ease;
+    transform-origin: 50% 50%;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin:-70px 0 0 -70px;
+        width:140px;
+        height:140px;
+    }
+    /* Active */
+    .coverflow-item.active{
+        width:240px;
+        height:280px;
+        opacity:1;
+    }
+    .coverflow-item.active .coverflow-label{
+        font-size:30px;
+        top:0;
+    }
+    .coverflow-item.active .item{
+        margin:-110px 0 0 -110px;
+        width:220px;
+        height:220px;
+    }
+.coverflow-nav-arrow{
+    margin:40px 0;
+    font-size:24px;
+    text-align:center;
+}
+.coverflow-nav-arrow li{display:inline}
+.coverflow-more,
+.coverflow-infos{
+    position: relative;
+    width:880px;
+    margin:0 auto;
+}
+.coverflow-slider{
+    width:400px;
+    margin:10px auto 0;
+}
